@@ -1,13 +1,11 @@
 public class Pagamento {
-    double taxa = 0;
     public double calcularTotal(Compra compra){
         double totalFim;
         totalFim = compra.getCompra() * ((1+ this.buscarTaxa(compra.getParcelas())));
         return totalFim;
     }
     public double calcularParcelas(double totalFinal, int parcelas){
-        double parcelasParaPagar = totalFinal / parcelas;
-        return parcelasParaPagar;
+        return totalFinal / parcelas;
     }
 
     private double buscarTaxa(int parcelas ) {
@@ -25,9 +23,7 @@ public class Pagamento {
             return taxa;
     }
     public double mostrarJuros(int juros){
-        Compra compra = new Compra();
         double parcelas = buscarTaxa(juros);
-        double view = parcelas *100;
-        return view;
+        return parcelas *100;
     }
 }
