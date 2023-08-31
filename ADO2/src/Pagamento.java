@@ -17,7 +17,7 @@ public class Pagamento {
             taxa = 0.05;
             return taxa;
         } else if (parcelas >= 12) {
-            taxa = 0.12;
+            taxa = 0.10;
             return taxa;
         }else
             return taxa;
