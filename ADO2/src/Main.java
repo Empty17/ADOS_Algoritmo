@@ -10,12 +10,14 @@ public class Main{
 
         ui.boasVindas();
 
+        //Entrada
         System.out.println("Digite o valor da compra:");
         compra.setCompra(ler.nextDouble());
         System.out.println("Digite a quantidade de parcelas");
         compra.setParcelas(ler.nextInt());
 
 
+        //Saida
         ui.extrato(compra,pagamento);
 
     }
