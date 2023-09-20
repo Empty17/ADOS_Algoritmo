@@ -4,12 +4,10 @@ public class LojaOnline {
     public NotaFiscal efetuarCompra(Compra compra){
        NotaFiscal notaFiscal = new NotaFiscal();
        Item item = new Item();
-       Cliente cliente = new Cliente();
-       compra.setCliente(cliente);
 
-       notaFiscal.setCliente(cliente);
+       notaFiscal.setCliente(compra.getCliente());
        notaFiscal.setCodNota(gerarCodNota());
-       notaFiscal.setValorParcelas(item.getPreco()/ compra.getParcelas());
+       notaFiscal.setValorParcelas(compra.getParcelas());
        notaFiscal.setTotal(calcularTotal(compra));
 
        return notaFiscal;

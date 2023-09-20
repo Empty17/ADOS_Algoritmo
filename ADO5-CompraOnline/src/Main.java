@@ -26,7 +26,7 @@ public class Main {
 
         compra.setCarrinho(itens);
 
-        compra.setCupom(ui.pedirTexto("Cupom: "));
+        compra.setCupom(ui.pedirTexto("Cupom (QUERO100, QUERO200, QUERO500) ou 0: "));
         compra.setFormaPag(ui.pedirTexto("Forma de Pagamento (CRÉDITO, DÉBITO E PIX): "));
         if(compra.getFormaPag().equals("CRÉDITO"))
             compra.setParcelas(ui.pedirInt("Quantas parcelas deseja realizar?: "));

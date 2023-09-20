@@ -40,7 +40,7 @@ public class UI {
         pularLinha();
         pularLinha();
         System.out.println("################################");
-        System.out.println("         NOTA FISCAL GERADA     ");
+        System.out.println("      NOTA FISCAL GERADA     ");
         System.out.println("################################");
         System.out.printf("\nNome: %s", notaFiscal.getCliente().getNome());
         System.out.printf("\nEMAIL: %s",notaFiscal.getCliente().getEmail() );
@@ -53,8 +53,8 @@ public class UI {
         pularLinha();
         System.out.printf("VALOR A PAGAR");
         System.out.printf("\nCOD. NOTA: %d", notaFiscal.getCodNota());
-        System.out.printf("\nVALOR FINAL: %s",notaFiscal.getTotal() );
         System.out.printf("\nPARCELAS: %s", notaFiscal.getValorParcelas());
+        System.out.printf("\nVALOR FINAL: %s",notaFiscal.getTotal() );
         System.out.println("\n################################");
     }
 }
